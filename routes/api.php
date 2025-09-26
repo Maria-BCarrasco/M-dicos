@@ -9,4 +9,7 @@ Route::post('medicos', [MedicoController::class, 'store']);
 Route::get('medicos/{id}', [MedicoController::class, 'show']);
 Route::put('medicos/{id}', [MedicoController::class, 'update']);
 Route::delete('medicos/{id}', [MedicoController::class, 'delete']);
+Route::get('especialidade', [MedicoController::class, 'medico_especialidade']);
+Route::get('cpf', [MedicoController::class, 'medico_cpf']);
+
 

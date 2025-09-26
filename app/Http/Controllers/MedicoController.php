@@ -99,14 +99,18 @@ class MedicoController extends Controller
         return response()->json(['Médico deletado com successo']);
     }
 
-    public function medico_especialidade($Request $request)
+    public function medico_especialidade(Request $request)
     {
-        Medico::where('especialiade', $request->especialidade)->get();
+        $medicos = Medico::where('especialiade', $request->especialidade)->get();
+
+        return response()->json($medicos);
     }
 
-    public function medico_cpf($Request $request)
+    public function medico_cpf(Request $request)
     {
-        Medico::where('cpf', $request->cpf)->get();
+        $medicos = Medico::where('cpf', $request->cpf)->get();
+
+        return response()->json($medicos);
     }
 
 }
